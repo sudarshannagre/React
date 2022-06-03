@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 
 
@@ -6,7 +7,7 @@ class LoginClass extends React.Component {
 
     render() {
         return (
-
+        <><Navbar/>
             <div className="card">
                 <div className="text-left">
                     <img src="https://i.imgur.com/k8jHuy2.png" width="200" />
@@ -46,6 +47,7 @@ class LoginClass extends React.Component {
                 </div>
 
             </div>
+            </>
         );
     }
 }
