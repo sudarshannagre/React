@@ -1,6 +1,7 @@
 import React from "react";
 
 function Navbar() {
+    const name  = localStorage.getItem("userName").split(":")[1];
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -21,7 +22,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        Welcome, Sudarshan
+                        Welcome, {name}
                     </span>
                 </div>
             </div>

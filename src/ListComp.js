@@ -1,16 +1,31 @@
+import axios from "axios";
 import React from "react";
 import Navbar from "./Navbar";
 
 function ListComp(){
-    const myList = [1,2,3,4,5];
 
-    const nameList = ['Sudarshan','Ganesh','Shyam','Shiv'];
+    const name  = localStorage.getItem("userName").split(":")[1];
+
+    function list(){
+        alert("list");
+
+        axios.get("http://localhost:8080/v1/student").then(response =>{
+            alert(response.data);
+
+        }).catch(error =>{
+            alert("something went wrong !!"+error);
+        });
+
+
+    }
 
     return(
+        <>
+        <Navbar/>
        
-        nameList.map((name)=>
-            <li>{name}</li>
-        )
+        <button onClick={list}>List of Employee</button>
+
+       </>
     );
 
 }
